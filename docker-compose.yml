@@ -8,6 +8,7 @@ services:
       - 3000:3000
     environment:
       - PORT=3000
+      - NAME=proxy-service
 
   desktop-service:
     container_name: desktop-service
@@ -16,8 +17,9 @@ services:
       - 3001:3001
     environment:
       - PORT=3001
-      - PROXY_HOST=proxy-service
-      - PROXY_PORT=3000
+      - REGISTRY_HOST=proxy-service
+      - REGISTRY_PORT=3000
+      - NAME=desktop-service
     depends_on:
       - proxy-service
     links:
@@ -30,8 +32,9 @@ services:
       - 3004:3004
     environment:
       - PORT=3004
-      - PROXY_HOST=proxy-service
-      - PROXY_PORT=3000
+      - REGISTRY_HOST=proxy-service
+      - REGISTRY_PORT=3000
+      - NAME=about-service
     depends_on:
       - proxy-service
     links:
@@ -44,8 +47,9 @@ services:
       - 3003:3003
     environment:
       - PORT=3003
-      - PROXY_HOST=proxy-service
-      - PROXY_PORT=3000
+      - REGISTRY_HOST=proxy-service
+      - REGISTRY_PORT=3000
+      - NAME=person-service
     depends_on:
       - proxy-service
     links:
@@ -58,8 +62,9 @@ services:
       - 3002:3002
     environment:
       - PORT=3002
-      - PROXY_HOST=proxy-service
-      - PROXY_PORT=3000
+      - REGISTRY_HOST=proxy-service
+      - REGISTRY_PORT=3000
+      - NAME=people-service
     depends_on:
       - proxy-service
     links:

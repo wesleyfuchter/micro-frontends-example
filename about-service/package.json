@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "env $(cat .env) nodemon server.js",
-    "docker:deploy": "env $(cat docker.env) node server.js",
+    "docker:deploy": "node server.js",
     "docker:build": "docker build . -t about-service:latest"
   },
   "author": "",
