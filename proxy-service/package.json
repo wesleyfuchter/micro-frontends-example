@@ -1,11 +1,12 @@
 {
-  "name": "desktop-service",
+  "name": "proxy-service",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
     "start": "env $(cat .env) nodemon server.js",
-    "deploy": "env $(cat .env) node server.js"
+    "deploy": "env $(cat .env) node server.js",
+    "docker-build": "docker build . -t proxy-service:latest"
   },
   "author": "",
   "license": "Apache-2.0",

@@ -4,7 +4,8 @@
   "description": "Example of micro-services approach on frontend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "services:install": "find ./*-service -maxdepth 1 -name package.json -execdir npm install \\;",
+    "services:docker": "find ./*-service -maxdepth 1 -name package.json -execdir npm run docker-build \\;"
   },
   "repository": {
     "type": "git",

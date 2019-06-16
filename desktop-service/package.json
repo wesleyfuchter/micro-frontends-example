@@ -5,7 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "env $(cat ./dev/.env) nodemon server.js",
-    "deploy": "env $(cat ./prod/.env) node server.js"
+    "deploy": "env $(cat ./prod/.env) node server.js",
+    "docker-build": "docker build . -t desktop-service:latest"
   },
   "author": "",
   "license": "Apache-2.0",
