@@ -1,4 +1,3 @@
-const baseServer = require('../base-server');
 const express = require('express');
 const http = require('http');
 const app = express();
@@ -15,12 +14,16 @@ const createProxy = (path, target) => {
     }
 };
 
-app.get('/info', (req, res) => res.status(200).json(baseServer.getInfoResponse(process.env)));
+app.get('/info', (req, res) => res.status(200).json({
+    status: 'UP',
+    port: process.env.PORT,
+    name: process.env.NAME
+}));
 
 app.get('/routes', (req, res) => res.status(200).json(routes));
 
 app.post('/registry', (req, res) => {
-    createProxy(`/${req.body.name}`, `http://${process.env.HOST}:${req.body.port}/`);
+    createProxy(`/${req.body.name}`, `http://${req.body.name}:${req.body.port}/`);
     res.sendStatus(201);
 });
 

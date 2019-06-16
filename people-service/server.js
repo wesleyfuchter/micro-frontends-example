@@ -1,4 +1,3 @@
-const baseServer = require('../base-server');
 const express = require('express');
 const http = require('http');
 const axios = require('axios');
@@ -6,7 +5,11 @@ const app = express();
 const port = process.env.PORT || '3000';
 const path = require('path');
 
-app.get('/info', (req, res) => res.status(200).json(baseServer.getInfoResponse(process.env)));
+app.get('/info', (req, res) => res.status(200).json({
+    status: 'UP',
+    port: process.env.PORT,
+    name: process.env.NAME
+}));
 
 const dir = __dirname + '/public/';
 

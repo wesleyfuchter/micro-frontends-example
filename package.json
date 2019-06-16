@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "services:install": "find ./*-service -maxdepth 1 -name package.json -execdir npm install \\;",
-    "services:docker": "find ./*-service -maxdepth 1 -name package.json -execdir npm run docker-build \\;"
+    "services:docker": "find ./*-service -maxdepth 1 -name package.json -execdir npm run docker:build \\;"
   },
   "repository": {
     "type": "git",

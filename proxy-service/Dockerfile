@@ -10,4 +10,4 @@ RUN npm install
 
 EXPOSE $PORT
 
-CMD PORT=$PORT npm start
+CMD PORT=$PORT npm run docker:deploy
