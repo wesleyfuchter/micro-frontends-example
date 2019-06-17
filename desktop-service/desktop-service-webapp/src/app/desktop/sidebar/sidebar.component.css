@@ -1,0 +1,42 @@
+.sidebar-main-div {
+  position: absolute;
+  top: 57px;
+  width: 100%;
+  bottom: 0px;
+  word-wrap: normal;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.sidebar-left-div {
+  height: 100%;
+  width: 275px;
+  float: left;
+  position: relative;
+  background: #F5F5F5;
+  transition: .1s linear;
+  box-shadow: 0 0 20px 0 grey;
+}
+
+.sidebar-left-div:hover {
+  overflow: auto;
+}
+
+.sidebar-item:hover {
+  background: #e8e8e8;
+  cursor: pointer;
+}
+
+.sidebar-body-div {
+  background: #f2f2f2;
+  height: 100%;
+  display: flex;
+  padding-left: 10px;
+}
+
+.sidebar-body-div-outlet {
+  width: 100%;
+  margin-top: 5px;
+  margin-right: 5px;
+  overflow: auto;
+}

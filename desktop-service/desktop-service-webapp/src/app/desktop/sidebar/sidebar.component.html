@@ -1,0 +1,29 @@
+<div class="sidebar-main-div">
+
+  <div id="sideBar" class="sidebar-left-div">
+
+    <mat-list style="visibility: initial; overflow: auto;">
+
+      <mat-list-item class="sidebar-item" [routerLink]="[{ outlets: { desktop: ['people'] } }]">
+        <mat-icon mat-list-icon style="color: #898984;">perm_identity</mat-icon>
+        <h4 matLine>People</h4>
+      </mat-list-item>
+
+      <mat-list-item class="sidebar-item" [routerLink]="[{ outlets: { desktop: ['about'] } }]">
+        <mat-icon mat-list-icon style="color: #898984;">account_balance</mat-icon>
+        <h4 matLine>About</h4>
+      </mat-list-item>
+
+    </mat-list>
+
+  </div>
+
+  <div class="sidebar-body-div" id="desktop">
+
+    <div class="sidebar-body-div-outlet">
+      <router-outlet name="desktop"></router-outlet>
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,55 @@
+body{
+  margin: 0px;
+}
+
+.row:hover {
+  background-color: #f3f3f3;
+  cursor: pointer;
+}
+
+.list-card {
+  margin-bottom: 1px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.list-card:hover {
+  background-color: #f3f3f3;
+}
+
+.list-button {
+  height: 20px;
+  opacity: 0.6;
+  z-index: 2;
+}
+
+.list-view {
+  padding: 5px 5px 5px 5px;
+  background-color: #fcfcfc;
+}
+
+.list-view-card {
+  padding: 5px;
+}
+
+.list-view-container {
+  padding: 5px 5px 28px 5px;
+}
+
+.list-view-title {
+  font-size: 16px;
+  font-weight: bold;
+  top: 10px;
+  position: relative;
+}
+
+.invalid-text {
+  opacity: 0.6;
+  font-size: 12px;
+}
+
+.button {
+  background-color: #14037e;
+  opacity: 1;
+}
