@@ -5,6 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "env $(cat .env) nodemon server.js",
+    "webapp:build": "cd ./desktop-service-webapp/ && npm run build",
+    "webapp:deploy": "mv ./desktop-service-webapp/dist/desktop-service-webapp/* ./public/",
     "docker:deploy": "node server.js",
     "docker:build": "docker build . -t desktop-service:latest"
   },
