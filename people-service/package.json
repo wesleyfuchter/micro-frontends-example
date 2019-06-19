@@ -5,6 +5,9 @@
   "main": "server.js",
   "scripts": {
     "start": "env $(cat .env) nodemon server.js",
+    "webapp:clean": "rm -rf public/*",
+    "webapp:build": "cd ./people-service-webapp/ && npm run build",
+    "webapp:deploy": "mv ./people-service-webapp/build/* ./public/",
     "docker:deploy": "node server.js",
     "docker:build": "docker build . -t people-service:latest"
   },
